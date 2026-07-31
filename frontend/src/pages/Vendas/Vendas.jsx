@@ -7,6 +7,9 @@ import autoTable from "jspdf-autotable"
 import Layout from "../../components/Layout/Layout";
 import "../../styles/vendas.css";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
+
 function Vendas() {
 
     const [clientes, setClientes] = useState([]);

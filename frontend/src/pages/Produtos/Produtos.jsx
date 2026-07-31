@@ -4,6 +4,9 @@ import axios from "axios";
 import Layout from "../../components/Layout/Layout";
 import "../../styles/produtos.css";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
+
 function Produtos() {
 
     const [mostrarFormulario, setMostrarFormulario] = useState(false);

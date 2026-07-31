@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import "../../styles/dashboard.css";
 
+
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -32,6 +33,7 @@ ChartJS.register(
     Legend
 );
 
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Dashboard() {
 
