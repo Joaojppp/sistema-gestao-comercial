@@ -1,0 +1,95 @@
+.vendas-container{
+
+    padding:20px;
+
+}
+
+.formulario-venda{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+}
+
+.formulario-venda select,
+.formulario-venda input {
+
+    width:100%;
+
+    margin-bottom:12px;
+
+    padding:8px;
+
+}
+
+.tabela-vendas th,
+.tabela-vendas td{
+
+    border:1px solid #ddd;
+
+    padding:10px;
+    
+}
+
+.modal {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+
+}
+
+.modal_conteudo h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.modal_conteudo h3 {
+
+    margin-top: 20px;
+
+}
+
+.modal_conteudo button {
+
+    margin-top: 20px;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+}
+
+input[type="text"]{
+
+    padding: 10px;
+
+    width: 300px;
+
+    margin-bottom: 20px;
+
+    border-radius: 6px;
+
+    border: 1px solid #ccc;
+
+}

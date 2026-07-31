@@ -1,0 +1,44 @@
+.clientes-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.btn-novo {
+    width: 180px;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-novo:hover {
+    background-color: #1d4ed8;
+}
+
+.formulario-cliente {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 350px;
+    margin-bottom: 25px;
+}
+
+.tabela-clientes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-clientes th,
+.tabela-clientes td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd ;
+    text-align: left;
+}
+
+.tabela-clientes th {
+    background-color: #f3f4f6;
+}
