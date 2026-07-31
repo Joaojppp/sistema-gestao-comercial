@@ -1,10 +1,12 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 import Layout from "../../components/Layout/Layout";
 import "../../styles/clientes.css";
 
-import { toast } from "react - toastify";
+import { toast } from "react-toastify";
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Clientes() {
 
@@ -31,7 +33,7 @@ function Clientes() {
         try {
 
             const resposta = await axios.get(
-                `http://localhost:3001/clientes?nome=${pesquisa}`
+                `${API_URL}/clientes?nome=${pesquisa}`
             );
 
             setClientes(resposta.data);
@@ -57,7 +59,7 @@ function Clientes() {
             try{
 
         await axios.put(
-            `http://localhost:3001/clientes/${clienteEditando.id}`,
+            `${API_URL}/clientes/${clienteEditando.id}`,
             {
                 nome,
                 email,
@@ -90,7 +92,7 @@ function Clientes() {
     
     try{
 
-        await axios.post("http://localhost:3001/clientes", {
+        await axios.post(`${API_URL}/clientes`, {
             nome,
             email,
             telefone
@@ -117,7 +119,7 @@ function Clientes() {
 
         try {
 
-            await axios.delete(`http://localhost:3001/clientes/${id}`);
+            await axios.delete(`${API_URL}/clientes/${id}`);
 
             await carregarClientes();
 

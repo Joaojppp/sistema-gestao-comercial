@@ -39,7 +39,7 @@ function Vendas() {
         try {
 
             const resposta = await axios.get(
-                "http://localhost:3001/clientes"
+                `${API_URL}/clientes`
             );
 
             setClientes(resposta.data);
@@ -57,7 +57,7 @@ function Vendas() {
         try {
 
             const resposta = await axios.get(
-                "http://localhost:3001/produtos"
+                `${API_URL}/produtos`
             );
 
             setProdutos(resposta.data);
@@ -75,7 +75,7 @@ function Vendas() {
         try {
 
             const resposta = await axios.get(
-                "http://localhost:3001/vendas"
+                `${API_URL}/vendas`
 
             );
 
@@ -94,7 +94,7 @@ function Vendas() {
         try {
 
             const resposta = await axios.get(
-                `http://localhost:3001/vendas/${id}`
+                `${API_URL}/vendas/${id}`
             );
 
             console.log(resposta.data);
@@ -195,7 +195,7 @@ doc.save(`Venda-${vendaSelecionada.venda.id}.pdf`);
         try {
 
             await axios.delete(
-                `http://localhost:3001/vendas/${id}`
+                `${API_URL}/vendas/${id}`
             );
 
             await carregarVendas();
@@ -293,7 +293,7 @@ doc.save(`Venda-${vendaSelecionada.venda.id}.pdf`);
 
             await axios.post(
 
-                "http://localhost:3001/vendas",
+                `${API_URL}/vendas`,
 
                 {
 

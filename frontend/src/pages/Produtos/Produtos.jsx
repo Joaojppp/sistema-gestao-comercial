@@ -30,7 +30,7 @@ function Produtos() {
 
             const resposta = await axios.get(
 
-                `http://localhost:3001/produtos?nome=${pesquisa}`
+                `${API_URL}/produtos?nome=${pesquisa}`
 
             );
 
@@ -55,7 +55,7 @@ function Produtos() {
             try{
 
         await axios.put(
-            `http://localhost:3001/produtos/${produtoEditando.id}`,
+            `${API_URL}/produtos/${produtoEditando.id}`,
             {
                 nome,
                 descricao,
@@ -90,7 +90,7 @@ function Produtos() {
     
     try{
 
-        await axios.post("http://localhost:3001/produtos", {
+        await axios.post(`${API_URL}/produtos`, {
             nome,
             preco,
             descricao,
@@ -124,7 +124,7 @@ function Produtos() {
         try {
 
             await axios.delete(
-             `http://localhost:3001/produtos/${id}`
+             `${API_URL}/produtos/${id}`
             );
 
             await carregarProdutos();

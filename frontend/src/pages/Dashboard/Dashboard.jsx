@@ -63,7 +63,7 @@ function Dashboard() {
         try {
 
             const resposta = await axios.get(
-                "http://localhost:3001/dashboard"
+                `${API_URL}/dashboard`
             );
 
             setDados(resposta.data);
@@ -81,7 +81,7 @@ function Dashboard() {
         try {
 
             const resposta = await axios.get(
-                "http://localhost:3001/dashboard/grafico"
+                `${API_URL}/dashboard/grafico`
             );
 
             setGrafico(resposta.data);
@@ -100,7 +100,7 @@ function Dashboard() {
 
             const resposta = await axios.get(
 
-                "http://localhost:3001/dashboard/estoque-baixo"
+                `${API_URL}/dashboard/estoque-baixo`
             
             );
 
@@ -119,7 +119,7 @@ function Dashboard() {
 
             const resposta = await axios.get(
 
-                "http://localhost:3001/dashboard/mais-vendidos"
+                `${API_URL}/dashboard/mais-vendidos`
 
             );
 
